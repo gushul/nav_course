@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: nav_course	
+  password: nav_course
+  host: localhost
+
+production:
+  <<: *default
+  database: nav_course
+
+
+development:
+  <<: *default
+  database: nav_course_dev
+
+test:
+  <<: *default
+  database: nav_course_test
+
